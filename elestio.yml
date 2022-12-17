@@ -1,0 +1,42 @@
+ports:
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "443"
+    targetPort: "5000"
+    targetIP: "172.17.0.1"
+    public: true
+    path: "/"
+    isAuth: false
+environments:
+  - key: "FUNKWHALE_HOSTNAME"
+    value: "[CI_CD_DOMAIN]"
+  - key: "FUNKWHALE_PROTOCOL"
+    value: "https"
+  - key: "NGINX_MAX_BODY_SIZE"
+    value: "100M"
+  - key: "FUNKWHALE_API_IP"
+    value: "172.17.0.1"
+  - key: "FUNKWHALE_API_PORT"
+    value: "5000"
+
+config:
+  runTime: "dockerCompose"
+  version: ""
+  framework: ""
+  buildCommand: "docker-compose build"
+  buildDir: "/"
+  runCommand: "docker-compose up -d"
+  icon: ""
+  screenshot: "funkwhale.png"
+lifeCycleConfig:
+  preInstallCommand: "./scripts/preInstall.sh"
+  postInstallCommand: "./scripts/postInstall.sh"
+  preBackupCommand: "./scripts/preBackup.sh"
+  postBackupCommand: "./scripts/postBackup.sh"
+  preRestoreCommand: "./scripts/preRestore.sh"
+  postRestoreCommand: "./scripts/postRestore.sh"
+webUI:
+  - url: "https://[CI_CD_DOMAIN]"
+    label: "FunkWhale Admin"
+    login: "root"
+    password: "[ADMIN_PASSWORD]"
