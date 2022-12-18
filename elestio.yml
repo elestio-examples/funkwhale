@@ -20,6 +20,8 @@ environments:
     value: "5000"
   - key: "DJANGO_SECRET_KEY"
     value: "random_password"
+  - key: "DATABASE_URL"
+    value: "postgresql://funkwhale:passw0rd@localhost:5432/funkwhale_database"
 
 config:
   runTime: "dockerCompose"
