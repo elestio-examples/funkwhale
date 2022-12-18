@@ -7,9 +7,9 @@ mkdir -p ./media
 mkdir -p ./music
 mkdir -p ./static
 mkdir -p ./frontend
-chown -R 1000:1000 ./data
-chown -R 1000:1000 ./dir
-chown -R 1000:1000 ./media
-chown -R 1000:1000 ./music
-chown -R 1000:1000 ./static
-chown -R 1000:1000 ./frontend
+chown -R 600:600 ./data
+chown -R 600:600 ./dir
+chown -R 600:600 ./media
+chown -R 600:600 ./music
+chown -R 600:600 ./static
+chown -R 600:600 ./frontend
