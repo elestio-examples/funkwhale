@@ -2,7 +2,7 @@ ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
     listeningPort: "443"
-    targetPort: "5000"
+    targetPort: "5894"
     targetIP: "172.17.0.1"
     public: true
     path: "/"
@@ -22,6 +22,8 @@ environments:
     value: "random_password"
   - key: "DATABASE_URL"
     value: "postgresql://funkwhale:passw0rd@localhost:5432/funkwhale_database"
+  - key: "EMAIL_CONFIG"
+    value: smtp://:@[DOMAIN]@vm.elestio.app.172.17.0.1:25
 
 config:
   runTime: "dockerCompose"
