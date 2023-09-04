@@ -1,5 +1,7 @@
 set -o allexport; source .env; set +o allexport;
 
+sleep 30s;
+
 docker-compose run --rm api funkwhale-manage migrate
 
 docker-compose exec -T api sh -c "funkwhale-manage createsuperuser --noinput --username=admin --email=${ADMIN_EMAIL}"
