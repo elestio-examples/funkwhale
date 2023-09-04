@@ -10,8 +10,10 @@ ports:
 environments:
   - key: "ADMIN_PASSWORD"
     value: "random_password"
+  - key: "ADMIN_EMAIL"
+    value: "[EMAIL]"
   - key: "SOFTWARE_VERION_TAG"
-    value: "stable"
+    value: "1.3.0"
   - key: "FUNKWHALE_HOSTNAME"
     value: "[CI_CD_DOMAIN]"
   - key: "FUNKWHALE_PROTOCOL"
@@ -52,6 +54,14 @@ environments:
     value: "^api/admin/"
   - key: "FUNKWHALE_FRONTEND_PATH"
     value: "/srv/funkwhale/front/dist"
+  - key: "MEDIA_ROOT"
+    value: "/srv/funkwhale/data/media"
+  - key: "MUSIC_DIRECTORY_PATH"
+    value: "/music"
+  - key: "STATIC_ROOT"
+    value: "/srv/funkwhale/data/static"
+  - key: "MUSIC_DIRECTORY_SERVE_PATH"
+    value: "/srv/funkwhale/data/music"
 
 config:
   runTime: "dockerCompose"

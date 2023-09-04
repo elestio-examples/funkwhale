@@ -1,9 +1,8 @@
 set env vars
 set -o allexport; source .env; set +o allexport;
 
-mkdir -p ./funkwhale
+# mkdir -p ./funkwhale
 
-chown -R 600:600 ./funkwhale
 
 
 DJANGO_SECRET_KEY=$(openssl rand -base64 45)
