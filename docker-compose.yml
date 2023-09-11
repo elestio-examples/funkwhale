@@ -16,7 +16,7 @@ services:
   redis:
     restart: always
     env_file: ./.env
-    image: elestio/redis:7.0
+    image: elestio/redis:latest
     command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]
     volumes:
       - ./data/redis:/data
