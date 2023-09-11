@@ -13,7 +13,7 @@ environments:
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
   - key: "SOFTWARE_VERION_TAG"
-    value: "latest"
+    value: "stable"
   - key: "FUNKWHALE_HOSTNAME"
     value: "[CI_CD_DOMAIN]/"
   - key: "FUNKWHALE_PROTOCOL"
