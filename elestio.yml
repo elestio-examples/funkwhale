@@ -15,7 +15,7 @@ environments:
   - key: "SOFTWARE_VERION_TAG"
     value: "1.4.0"
   - key: "FUNKWHALE_HOSTNAME"
-    value: "[CI_CD_DOMAIN]/"
+    value: "[CI_CD_DOMAIN]"
   - key: "FUNKWHALE_PROTOCOL"
     value: "https"
   - key: "NGINX_MAX_BODY_SIZE"
