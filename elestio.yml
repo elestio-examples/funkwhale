@@ -94,5 +94,5 @@ lifeCycleConfig:
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
     label: "FunkWhale Admin"
-    login: "root"
+    login: "administrator"
     password: "[ADMIN_PASSWORD]"

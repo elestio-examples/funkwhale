@@ -13,5 +13,5 @@ Deploy FunkWhale server with CI/CD on Elestio
 You can can open FunkWhale UI here:
 
     URL: https://[CI_CD_DOMAIN]
-    Login: root
+    Login: administrator
     password: [ADMIN_PASSWORD]
