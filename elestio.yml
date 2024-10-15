@@ -12,7 +12,7 @@ environments:
     value: "random_password"
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
-  - key: "SOFTWARE_VERION_TAG"
+  - key: "SOFTWARE_VERSION_TAG"
     value: "1.4.0"
   - key: "FUNKWHALE_HOSTNAME"
     value: "[CI_CD_DOMAIN]"
