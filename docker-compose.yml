@@ -23,7 +23,7 @@ services:
 
   celeryworker:
     restart: always
-    image: funkwhale/api:${SOFTWARE_VERION_TAG}
+    image: funkwhale/api:${SOFTWARE_VERSION_TAG}
     depends_on:
       - postgres
       - redis
