@@ -50,7 +50,7 @@ services:
 
   celerybeat:
     restart: always
-    image: funkwhale/api:${SOFTWARE_VERION_TAG}
+    image: funkwhale/api:${SOFTWARE_VERSION_TAG}
     command:
       - celery
       - --app=funkwhale_api.taskapp
@@ -63,7 +63,7 @@ services:
 
   api:
     restart: always
-    image: funkwhale/api:${SOFTWARE_VERION_TAG}
+    image: funkwhale/api:${SOFTWARE_VERSION_TAG}
     depends_on:
       - postgres
       - redis
@@ -75,7 +75,7 @@ services:
 
   front:
     restart: always
-    image: funkwhale/front:${SOFTWARE_VERION_TAG}
+    image: funkwhale/front:${SOFTWARE_VERSION_TAG}
     depends_on:
       - api
     env_file:
